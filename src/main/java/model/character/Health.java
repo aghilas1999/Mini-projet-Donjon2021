@@ -5,12 +5,10 @@ public class Health {
     private int max;
     private int actual;
 
-    private int effect;
-
     public Health(){
         actual = 20;
         max = 20;
-        //@TODO
+
     }
     public boolean isDead(){
         return actual==0;
@@ -32,8 +30,6 @@ public class Health {
         else
             actual = actual+ heal;
     }
-
-    public boolean isAlive(){return  ! isDead(); }
 
 
     public void setHeal(int i) {

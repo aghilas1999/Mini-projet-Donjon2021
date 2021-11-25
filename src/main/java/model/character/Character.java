@@ -15,22 +15,13 @@ import java.util.ArrayList;
 abstract public class Character implements CharacterInterface {
 
     public Inventory inventory;
-//    public Bag bag;
-//    public Equipement equipement = new Equipement(null, null);
 
     public Health health = new Health();
-    //for effect
-
-    public Actions actions;
-
     public Position position;
     public Position oldPosition;
 
     public Position getPosition() {
         return position;
-    };
-    public Position getoldPosition() {
-        return oldPosition;
     };
 
     public Character() {

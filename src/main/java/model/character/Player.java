@@ -38,8 +38,7 @@ public class Player extends Character implements CharacterInterface {
                 return false;
         }
         if(move.isMob(destination)) {
-            view.handleMove(new Move("You will merge with a monster!\n" +
-                    " What are you trying to achieve?! An hybrid space monster??"));
+            view.handleMove(new Move("You will merge with a monster!"));
             return false;
         }
         if ( move.isWall(destination)) {

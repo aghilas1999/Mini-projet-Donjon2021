@@ -48,20 +48,20 @@ public class PlanView {
      */
     public void drawing(Player player) {
 
-        System.out.println(" ☺ : You || ♥:"+player.getHeal()+" || ☼ : mob || ♦ : enter || ◘:exit || ■:wall [][][][][][]");
+        System.out.println(" ☺ : You || ♥:"+player.getHeal()+" || M : mob || ♦ : enter || ◘:exit || ■:wall [][][][][][]");
         for (int y = plan.getWidth(); y > -plan.getWidth() - 1; y--) {
-            String line = "[ ";
+            String line = "* ";
             for (int x = 0; x < plan.getLenght() + 1; x++) {
                 if ((plan.getPlan().containsKey(plan.key(x, y)))) {
                     if (get(x, y) >= 0) {
                         if (get(x, y) == 2)
                             line = line + "   ";
                         if (get(x, y) == 3)
-                            line = line + " ☺ ";
+                            line = line + " P ";
                         if (get(x, y) == 4)
-                            line = line + " ☼ ";
+                            line = line + " M ";
                         if(get(x,y) == 5)
-                            line = line +" ◙ ";
+                            line = line +" T ";
 
                     }
                     else {
@@ -74,9 +74,9 @@ public class PlanView {
                     }
                 }
                 else
-                    line = line + ".. ";
+                    line = line + "# ";
             }
-            System.out.println(line + "]");
+            System.out.println(line + "*");
         }
 
     }

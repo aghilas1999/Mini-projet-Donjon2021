@@ -31,7 +31,6 @@ public class MapChestManagement {
 
     public void initialiseLoot(){
         loots = new ArrayList<>();
-        //@todo à retirer pour test
         loots.add(new Axe());
         loots.add(new SpacesSuit());
         initialiseRocket();
@@ -121,13 +120,6 @@ public class MapChestManagement {
         return null;
     }
 
-    public boolean checkChest(Position position){
-        for(Chest chest : chests){
-            if(existChestAround(position, chest.getPosition()))
-                return true;
-        }
-        return false;
-    }
 
     public ArrayList<Chest> getChests() {
         return chests;
@@ -135,10 +127,6 @@ public class MapChestManagement {
 
     public void setLoots(ArrayList<Object> newLoots) {
         loots = newLoots;
-    }
-
-    public ArrayList<Object> getLoots() {
-        return loots;
     }
 
     public void addLoots(Object object) {

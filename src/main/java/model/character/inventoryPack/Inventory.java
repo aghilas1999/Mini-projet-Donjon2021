@@ -39,7 +39,9 @@ public class Inventory {
         equipement.setArmor(armor, bag);
     }
 
-    //======================= Bag =================================
+    /**
+     * Bag
+     * */
 
     public ArrayList<Object> getBagArrayList(){
         return bag.getArrayList();

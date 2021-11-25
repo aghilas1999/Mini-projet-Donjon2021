@@ -11,6 +11,7 @@ public class Bag {
 
     ArrayList<Object> bag;
 
+    // Constructor
     public Bag(){
         bag = new ArrayList<>();
         Object object = new LazerGun();
@@ -21,6 +22,7 @@ public class Bag {
         return bag;
     }
 
+    // Une methode pour ajouter tout les object.
     public void addAll(ArrayList<Object> objects) {
         for(Object object : objects)
             add(object);
@@ -56,7 +58,7 @@ public class Bag {
 
     public void drop(Object object) {
         if(object.getName() == "Rocket") {
-            System.out.println("Is it true that getting stuck here is a much better option than bear the rocket load? \n You can't drop that, poor crazy!");
+            System.out.println("Is it true that getting stuck here is a much better option than bear the rocket load");
         }
         else
         bag.remove(object);

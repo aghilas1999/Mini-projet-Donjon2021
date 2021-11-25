@@ -35,18 +35,6 @@ public class Monstre extends Character {
         return (posJoueur.getDistance(getPosition())-1)<getWeapon().getRange();
     }
 
-
-    /**
-     * Code à améliorer car peu se bloquer dans un mur si on se cache derrière
-     * Idée à dev : on chercher un chemin en partant de la cible en ajoutant +1 à chaque case parcourut
-     * et suivre le cehmin le plus "leger" en attendant ce code simpliste fera l'affaire
-     *
-     * Cherche le chemin le plus rapide pour atteindre le joueur et se de placer
-     * de "speed" case vers lui
-     * Attention posDestionation = free sinon-> contourner-> sinon -> wait
-     * @param posJoueur
-     * @param map
-     */
     public void follow(Position posJoueur, Map map) {
         ArrayList<Position> positionsNext = new ArrayList<>();
         if (posJoueur.getY() > position.getY() && canGoOnPosition(position.top(),map, posJoueur))
@@ -72,8 +60,7 @@ public class Monstre extends Character {
     }
 
     /**
-     * Faire des dammages au joueur
-     * @param player
+     * Une methode qui nous permet de faire des
      */
     public void attackPlayer(Player player) {
         if(playerIsInRange(player.getPosition()))
@@ -111,9 +98,7 @@ public class Monstre extends Character {
     }
 
     /**
-     * Déplace un mob à une position si possible ou reste sur place
-     * @param map
-     * @param playerPosition
+     * Déplace un monstre à une position si possible ou reste sur place
      */
     public void move(Map map, Position playerPosition){
         ArrayList<Position> destinations = buildDestinations(map, playerPosition);
@@ -123,8 +108,6 @@ public class Monstre extends Character {
 
     /**
      * Construit un tableau de destination accessible et le retourne.
-     * @param map
-     * @param playerPosition
      * @return ArrayList<Position>
      */
     private ArrayList<Position> buildDestinations(Map map,Position playerPosition) {
@@ -145,10 +128,7 @@ public class Monstre extends Character {
     }
 
     /**
-     * Return if position is different of ( posJoueur, posMobs, void, wall)
-     * @param destination
-     * @param map
-     * @param playerPosition
+     * Return if position is different of ( posJoueur, posMonstre, void, wall)
      * @return practicable position
      */
     private boolean canGoOnPosition(Position destination, Map map, Position playerPosition){
@@ -162,7 +142,7 @@ public class Monstre extends Character {
     }
 
     /**
-     * Vérifie que la position n'est pas déjà occupé par celle d'un mob
+     * Vérifie que la position n'est pas déjà occupé par celle d'un monstre
      * @param map
      * @return
      */
@@ -178,7 +158,6 @@ public class Monstre extends Character {
      * Retourne si la postion n'est ni un mur ni le vide
      * @param destination
      * @param map
-     * @return
      */
     private boolean isWalkablePosition(Position destination, Map map) {
         return map.spawnable(destination.getX(), destination.getY());

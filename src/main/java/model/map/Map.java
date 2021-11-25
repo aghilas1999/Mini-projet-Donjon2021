@@ -15,16 +15,15 @@ import java.util.Random;
 public class Map implements MapInterface{
 
     private int stage=0;
-    private int minLengthGenerate = 10;  //min = 2
-    private int minWidthMapGenerate = 5;  //partant du centre
+    private int minLengthGenerate = 10; 
+    private int minWidthMapGenerate = 5;  
     private int maxLengthMap = 30;
-    private int maxWidthMap = 8;  // intialisé part la longuer de la map
+    private int maxWidthMap = 8; 
     private ArrayList<Wall> walls;
     private Plan plan;
     private Monstres monstres;
     private MapChestManagement mapChestManagement;
 
-    // A revoir les valeurs par défaut manque maxWidthMap
     public Map(int stage){
         this.stage= stage;
 
