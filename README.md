@@ -11,5 +11,5 @@ En aura des option a choisir et a démarré notre jeux.
 
 En utilise les touche (z,q,s,d) pour deplacer notre player.
 
-<img src="C:\Users\aghil\OneDrive\Images\Capture d’écran 2022-11-12 152645.png"/>
-<img src="C:\Users\aghil\OneDrive\Images\Capture d’écran 2022-11-12 152714.png"/>
+![Capture d’écran 2022-11-12 152645](https://user-images.githubusercontent.com/59511179/201479146-d0f66197-4bfd-4988-a7a5-60dc84228c5d.png)
+![Capture d’écran 2022-11-12 152714](https://user-images.githubusercontent.com/59511179/201479178-9d8de3ac-1dde-49fa-895f-8ef394248b6d.png)
